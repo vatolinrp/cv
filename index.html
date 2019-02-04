@@ -19,11 +19,34 @@
       a:hover {
         color: lightgrey;
       }
+      #seeMyPictureButton {
+        color: aliceblue;
+        background: inherit;
+        font-size: inherit;
+        font-family: inherit;
+        border-color: transparent;
+      }
+      #seeMyPictureButton:hover {
+        color: lightgrey;
+      }
     </style>
+    <script>
+    function seeMySexyPicture() {
+      var x = document.getElementById("myImage");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
   </head>
   <body class="wrapper">
     <div>
-      <img src="img/me-360kb.jpg" alt="picture of myself" class="img-class">
+      <button onclick="seeMySexyPicture()" id="seeMyPictureButton">Click here to see how I look like in real life</button>
+      <div id="myImage" style="display: none;">
+        <img src="img/me-360kb.jpg" alt="picture of myself" class="img-class">
+      </div>
       <ul>
         <li>Email: <a href="mailto:vatolinrp@icloud.com">vatolinrp@icloud.com</a></li>
         <li>Phone: <a href="callto:+375291768976">+375291768976</a></li>
